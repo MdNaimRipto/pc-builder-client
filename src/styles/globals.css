@@ -1,3 +1,118 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+.nav-logo {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.main-list {
+  height: 100px;
+  line-height: 100px;
+  color: #363636;
+}
+
+.main-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+  color: #303030;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.main-link:hover {
+  color: #f17732;
+}
+
+.dropdown-container {
+  position: absolute;
+  background: white;
+  transform: rotateX(90deg);
+  width: 220px;
+  padding: 0px 15px;
+  padding-bottom: 10px;
+  transition: 0.4s;
+}
+
+.main-list:hover .dropdown-container {
+  transform: rotateX(1deg);
+}
+
+.dropdown-arrow {
+  transform: rotate(1deg);
+  transition: 0.4s;
+}
+
+.main-list:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-lists li {
+  height: 45px;
+  line-height: 45px;
+  transition: 0.4s;
+}
+
+.dropdown-lists li:hover {
+  color: #f17732;
+}
+
+@media screen and (max-width: 576px) {
+  .nav-logo {
+    width: 60%;
+  }
+
+  .main-list {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .main-menu {
+    flex-direction: column;
+    gap: 0px;
+    height: 420px;
+    /* display: none; */
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .main-list {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .main-menu {
+    flex-direction: column;
+    gap: 0px;
+    height: 420px;
+    /* display: none; */
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1280px) {
+  .nav-container {
+    max-width: 960px;
+  }
+}

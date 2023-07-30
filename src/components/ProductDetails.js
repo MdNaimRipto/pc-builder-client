@@ -9,8 +9,16 @@ const ProductDetails = ({ details }) => {
   console.log(details);
   const [quantity, setQuantity] = useState(1);
 
-  const { productName, image, description, rating, price, keyFeatures, _id } =
-    details;
+  const {
+    productName,
+    image,
+    description,
+    rating,
+    price,
+    keyFeatures,
+    _id,
+    status,
+  } = details;
 
   const handleInc = () => {
     setQuantity((quantity) => quantity + 1);
@@ -88,8 +96,23 @@ const ProductDetails = ({ details }) => {
               {productName}
             </h2>
             <div className="text-base text-gray-700 md:text-lg flex items-center mb-3">
-              <span className="font-semibold mr-2">Rating:</span>
-              <StarRating rating={rating} />
+              <span className="font-semibold mr-2">Status:</span>
+              <span>
+                {status ? (
+                  <span className="text-green-600">In Stock</span>
+                ) : (
+                  <span className="text-red-500">Out of Stock</span>
+                )}
+              </span>
+            </div>
+            <div className="text-base text-gray-700 md:text-lg flex items-center mb-3">
+              <span className="font-semibold mr-2">Average Rating:</span>
+              <StarRating rating={4.8} />
+            </div>
+
+            <div className="text-base text-gray-700 md:text-lg flex items-center mb-3">
+              <span className="font-semibold mr-2">Individual Rating:</span>
+              <StarRating rating={4} />
             </div>
             <p className="text-2xl text-gray-700 md:text-lg flex items-center mb-3">
               <span className="font-semibold mr-2 text-2xl">Price:</span>

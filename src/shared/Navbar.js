@@ -109,7 +109,10 @@ const Navbar = () => {
       <div className="nav-container container mx-auto">
         <div className="nav-logo hidden lg:block">
           <Link href="/">
-            <img src={require("../assets/logo.png")} alt="logo" />
+            {/* <img src={require("../assets/logo.png")} alt="logo" /> */}
+            <p>
+              PC<span className="text-blue-600">BUILDER</span>
+            </p>
           </Link>
         </div>
         <div className="flex items-center justify-between w-full lg:hidden px-4">
@@ -120,7 +123,10 @@ const Navbar = () => {
                 setClick(false);
               }}
             >
-              <img src={require("../assets/logo.png")} alt="logo" />
+              <p>
+                PC<span className="text-blue-600">BUILDER</span>
+              </p>
+              {/* <img src={require("../assets/logo.png")} alt="logo" /> */}
             </Link>
           </div>
           <div>
@@ -163,7 +169,7 @@ const Navbar = () => {
 
             <li className="main-list">
               <Link
-                href={"/about"}
+                href={"/"}
                 className="main-link"
                 onClick={() => {
                   setClick(false);
@@ -175,7 +181,7 @@ const Navbar = () => {
 
             <li className="main-list">
               <Link
-                href={"/contact"}
+                href={"/"}
                 className="main-link"
                 onClick={() => {
                   setClick(false);
@@ -186,7 +192,7 @@ const Navbar = () => {
             </li>
             <li className="main-list">
               <Link
-                href={"/contact"}
+                href={"/"}
                 className="main-link"
                 onClick={() => {
                   setClick(false);
@@ -197,7 +203,7 @@ const Navbar = () => {
             </li>
             <li className="main-list block lg:hidden">
               <Link
-                href="/login"
+                href="/"
                 onClick={() => {
                   setClick(false);
                 }}
@@ -209,7 +215,7 @@ const Navbar = () => {
             </li>
             <li className="main-list block lg:hidden">
               <Link
-                href="/login"
+                href="/"
                 onClick={() => {
                   setClick(false);
                 }}

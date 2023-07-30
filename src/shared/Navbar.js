@@ -26,7 +26,7 @@ const Navbar = () => {
     <>
       <li>
         <Link
-          href={"/products/processors"}
+          href={"/products/processor"}
           className="dropdown-link"
           onClick={() => {
             setClick(false);
@@ -37,7 +37,7 @@ const Navbar = () => {
       </li>
       <li>
         <Link
-          href={"/products/motherboards"}
+          href={"/products/motherboard"}
           className="dropdown-link"
           onClick={() => {
             setClick(false);
@@ -59,7 +59,7 @@ const Navbar = () => {
       </li>
       <li>
         <Link
-          href={"/products/powerSupply"}
+          href={"/products/psu"}
           className="dropdown-link"
           onClick={() => {
             setClick(false);
@@ -70,7 +70,7 @@ const Navbar = () => {
       </li>
       <li>
         <Link
-          href={"/products/storageDevices"}
+          href={"/products/storageDevice"}
           className="dropdown-link"
           onClick={() => {
             setClick(false);
@@ -81,7 +81,7 @@ const Navbar = () => {
       </li>
       <li>
         <Link
-          href={"/products/monitors"}
+          href={"/products/monitor"}
           className="dropdown-link"
           onClick={() => {
             setClick(false);

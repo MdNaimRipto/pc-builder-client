@@ -77,6 +77,21 @@
   color: #f17732;
 }
 
+.hover-container {
+  position: relative;
+  transition: 0.3s;
+}
+
+.hover-effects {
+  position: absolute;
+  bottom: -50px;
+  transition: 0.3s;
+}
+
+.hover-container:hover .hover-effects {
+  bottom: 15px;
+}
+
 @media screen and (max-width: 576px) {
   .nav-logo {
     width: 60%;

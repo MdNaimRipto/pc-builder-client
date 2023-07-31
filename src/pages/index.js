@@ -17,7 +17,7 @@ export default function Home({ products }) {
 }
 
 export async function getStaticProps() {
-  const url = `http://localhost:5875/v1.0.0/products/getFeaturedProducts`;
+  const url = `https://pc-builder-server-one.vercel.app/v1.0.0/products/getFeaturedProducts`;
   const res = await fetch(url);
   const products = await res.json();
 

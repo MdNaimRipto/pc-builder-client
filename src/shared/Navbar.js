@@ -26,7 +26,7 @@ const Navbar = () => {
     <>
       <li>
         <Link
-          href={"/products/processor"}
+          href={"/products/cpu"}
           className="dropdown-link"
           onClick={() => {
             setClick(false);
@@ -70,7 +70,7 @@ const Navbar = () => {
       </li>
       <li>
         <Link
-          href={"/products/storageDevice"}
+          href={"/products/storage"}
           className="dropdown-link"
           onClick={() => {
             setClick(false);
@@ -109,7 +109,6 @@ const Navbar = () => {
       <div className="nav-container container mx-auto">
         <div className="nav-logo hidden lg:block">
           <Link href="/">
-            {/* <img src={require("../assets/logo.png")} alt="logo" /> */}
             <p>
               PC<span className="text-blue-600">BUILDER</span>
             </p>
@@ -126,7 +125,6 @@ const Navbar = () => {
               <p>
                 PC<span className="text-blue-600">BUILDER</span>
               </p>
-              {/* <img src={require("../assets/logo.png")} alt="logo" /> */}
             </Link>
           </div>
           <div>
@@ -141,7 +139,7 @@ const Navbar = () => {
           </div>
         </div>
         <div
-          className={`absolute w-full h-[500px] lg:h-full lg:w-[56%] px-3 bg-white lg:static top-24 duration-300 ${
+          className={`absolute w-full h-[500px] lg:h-full lg:w-[50%] px-3 bg-white lg:static top-24 duration-300 ${
             click ? `left-0 duration-300` : `left-[-1000px] duration-500`
           }`}
         >
@@ -190,7 +188,7 @@ const Navbar = () => {
                 <span>Contact Us</span>
               </Link>
             </li>
-            <li className="main-list">
+            <li className="main-list lg:hidden xl:block">
               <Link
                 href={"/"}
                 className="main-link"
@@ -215,7 +213,7 @@ const Navbar = () => {
             </li>
             <li className="main-list block lg:hidden">
               <Link
-                href="/"
+                href="/pc-builder"
                 onClick={() => {
                   setClick(false);
                 }}
@@ -230,15 +228,17 @@ const Navbar = () => {
         <div className="nav-buttons hidden lg:block">
           <div className="flex items-center gap-3">
             <button
-              className={`  flex gap-1.5 items-center px-[30px] py-3 rounded text-main transition-all duration-200 font-bold border border-blue-600 text-blue-600`}
+              className={`px-[30px] py-3 rounded border border-blue-600 text-blue-600`}
             >
               Login
             </button>
-            <button
-              className={`  flex gap-1.5 items-center px-[30px] py-3 rounded text-main transition-all duration-200 font-bold border border-blue-600 bg-blue-600 text-white`}
-            >
-              Pc Builder
-            </button>
+            <Link href="/pc-builder">
+              <button
+                className={`px-[30px] py-3 rounded border border-blue-600 bg-blue-600 text-white`}
+              >
+                Pc Builder
+              </button>
+            </Link>
           </div>
         </div>
       </div>

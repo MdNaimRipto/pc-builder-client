@@ -6,7 +6,6 @@ import StarRating from "./StarRating";
 import { useState } from "react";
 
 const ProductDetails = ({ details }) => {
-  console.log(details);
   const [quantity, setQuantity] = useState(1);
 
   const {

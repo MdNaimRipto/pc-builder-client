@@ -2,9 +2,8 @@ import ProductCard from "@/components/ProductCard";
 import React from "react";
 
 const FeaturedProducts = ({ products }) => {
-  console.log(products);
   return (
-    <div>
+    <div className="container px-4 pt-16 mx-auto lg:pb-20">
       <div className="mx-auto mb-10 sm:text-center">
         <h2 className="mb-4 text-2xl font-semibold text-center md:text-3xl">
           Featured Products

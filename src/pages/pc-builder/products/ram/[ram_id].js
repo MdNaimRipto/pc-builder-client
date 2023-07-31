@@ -2,11 +2,11 @@ import ProductDetails from "@/components/ProductDetails";
 import MainLayout from "@/layouts/MainLayout";
 import React from "react";
 
-const MonitorDetails = ({ details }) => {
+const RAMDetails = ({ details }) => {
   return <ProductDetails details={details.data} />;
 };
 
-export default MonitorDetails;
+export default RAMDetails;
 
 export async function getStaticPaths() {
   const url = `https://pc-builder-server-one.vercel.app/v1.0.0/products/getAllProducts`;
@@ -14,7 +14,7 @@ export async function getStaticPaths() {
   const products = await res.json();
 
   const paths = products.data.map((p) => ({
-    params: { monitor_id: p._id },
+    params: { ram_id: p._id },
   }));
 
   return { paths, fallback: false };
@@ -22,7 +22,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { params } = context;
-  const url = `https://pc-builder-server-one.vercel.app/v1.0.0/products/getProductsByID/${params.monitor_id}`;
+  const url = `https://pc-builder-server-one.vercel.app/v1.0.0/products/getProductsByID/${params.ram_id}`;
   const res = await fetch(url);
   const details = await res.json();
 
@@ -33,6 +33,6 @@ export async function getStaticProps(context) {
   };
 }
 
-MonitorDetails.getLayout = function getLayout(page) {
+RAMDetails.getLayout = function getLayout(page) {
   return <MainLayout>{page}</MainLayout>;
 };

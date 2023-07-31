@@ -4,7 +4,7 @@ import Link from "next/link";
 const Categories = () => {
   return (
     <div
-      className="container px-4 py-16 mx-auto lg:py-20"
+      className="container px-4 pb-16 mx-auto lg:pt-20"
       style={{ overflow: "hidden" }}
     >
       <div className="mx-auto mb-10 sm:text-center" data-aos="fade-left">
@@ -17,13 +17,13 @@ const Categories = () => {
       </div>
       <div className="grid grid-cols-2 gap-8 mx-auto md:grid-cols-3">
         <Link
-          href={"/products/processors"}
+          href={"/products/cpu"}
           className="flex flex-col items-center p-3 duration-200 border rounded-md py-5 hover:bg-main hover:text-white hover:bg-blue-600 border-black hover:border-blue-600"
         >
           <p className="text-sm font-semibold">CPU / Processors</p>
         </Link>
         <Link
-          href={"/products/motherboards"}
+          href={"/products/motherboard"}
           className="flex flex-col items-center p-3 duration-200 border rounded-md py-5 hover:bg-main hover:text-white hover:bg-blue-600 border-black hover:border-blue-600"
         >
           <p className="text-sm font-semibold">Motherboard</p>
@@ -35,19 +35,19 @@ const Categories = () => {
           <p className="text-sm font-semibold">RAM</p>
         </Link>
         <Link
-          href={"/products/powerSupply"}
+          href={"/products/psu"}
           className="flex flex-col items-center p-3 duration-200 border rounded-md py-5 hover:bg-main hover:text-white hover:bg-blue-600 border-black hover:border-blue-600"
         >
           <p className="text-sm font-semibold">Power Supply Unit</p>
         </Link>
         <Link
-          href={"/products/storageDevices"}
+          href={"/products/monitor"}
           className="flex flex-col items-center p-3 duration-200 border rounded-md py-5 hover:bg-main hover:text-white hover:bg-blue-600 border-black hover:border-blue-600"
         >
           <p className="text-sm font-semibold">Monitors</p>
         </Link>
         <Link
-          href={"/products/monitors"}
+          href={"/products/storage"}
           className="flex flex-col items-center p-3 duration-200 border rounded-md py-5 hover:bg-main hover:text-white hover:bg-blue-600 border-black hover:border-blue-600"
         >
           <p className="text-sm font-semibold">Storage Devices</p>

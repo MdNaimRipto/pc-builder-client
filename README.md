@@ -1,5 +1,7 @@
 - Website Name: PC Builder
 - Website Link: https://pc-builder-client-phi.vercel.app/
+- Client Side Github Repository Link: https://github.com/MdNaimRipto/pc-builder-client
+- Server Side Github Repository Link: https://github.com/MdNaimRipto/pc-builder-server
 - Website Features:
 
   - PC Builder is a website, where users can make their pc builds.
